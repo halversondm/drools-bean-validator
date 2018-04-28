@@ -1,0 +1,18 @@
+package com.halversondm.rules;
+dialect  "mvel"
+
+rule "validate person age"
+    when
+    p : Person(age == null || age == 0)
+    e : Errors()
+    then
+    e.addError(p, "age", "Age is missing");
+end
+
+rule "validate person name"
+    when
+    p: Person(name == null || name == "")
+    e: Errors()
+    then
+    e.addError(p,"name", "Name is missing");
+end
