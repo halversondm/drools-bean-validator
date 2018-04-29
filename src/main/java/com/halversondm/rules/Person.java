@@ -1,5 +1,8 @@
 package com.halversondm.rules;
 
+import com.halversondm.validation.BusinessRulesConstraint;
+
+@BusinessRulesConstraint
 public class Person {
 
     private Integer age;
